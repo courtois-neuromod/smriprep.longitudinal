@@ -1,2 +1,6 @@
 [datalad "dataset"]
 	id = 428cc920-6975-4b3f-82c6-a078ed1fa8f8
+[datalad "containers.bids-fmriprep"]
+	image = containers/images/bids/bids-fmriprep--23.1.4.sing
+	cmdexec = {img_dspath}/containers/scripts/singularity_cmd run {img} {cmd}
+	updateurl = shub://ReproNim/containers:bids-fmriprep--20.2.0
