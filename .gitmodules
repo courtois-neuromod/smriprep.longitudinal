@@ -1,0 +1,5 @@
+[submodule "sourcedata/cneuromod.anat.freesurfer_longitudinal"]
+	path = sourcedata/cneuromod.anat.freesurfer_longitudinal
+	url = /lustre03/project/rrg-pbellec/ria-beluga/alias/cneuromod.anat.freesurfer_longitudinal
+	datalad-id = a05d7185-17f8-49d8-91ae-f3859a483815
+	datalad-url = "ria+file:///lustre03/project/rrg-pbellec/ria-beluga#~cneuromod.anat.freesurfer_longitudinal"
