@@ -13,3 +13,7 @@
 	url = /lustre03/project/rrg-pbellec/ria-beluga/alias/repronim/containers
 	datalad-id = b02e63c2-62c1-11e9-82b0-52540040489c
 	datalad-url = "ria+file:///lustre03/project/rrg-pbellec/ria-beluga#~repronim/containers"
+[submodule "code/smriprep"]
+	path = code/smriprep
+	url = git@github.com:bpinsard/smriprep.git
+	datalad-url = git@github.com:bpinsard/smriprep.git
