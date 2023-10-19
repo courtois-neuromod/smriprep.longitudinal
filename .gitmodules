@@ -23,3 +23,8 @@
 	url = git@github.com:bpinsard/smriprep.git
 	datalad-url = git@github.com:bpinsard/smriprep.git
 	datalad-id = d75cd9e8-e9fe-40f7-9860-1bf7479c178b
+[submodule "sourcedata/cneuromod.anat.gradcorrect"]
+	path = sourcedata/cneuromod.anat.gradcorrect
+	url = /lustre03/project/rrg-pbellec/ria-beluga/alias/cneuromod.anat.gradcorrect
+	datalad-id = 05db4981-28dd-4404-a8d2-d3adc4322392
+	datalad-url = "ria+file:///lustre03/project/rrg-pbellec/ria-beluga#~cneuromod.anat.gradcorrect"
