@@ -3,11 +3,6 @@
 	url = /lustre03/project/rrg-pbellec/ria-beluga/alias/cneuromod.anat.freesurfer_longitudinal
 	datalad-id = a05d7185-17f8-49d8-91ae-f3859a483815
 	datalad-url = "ria+file:///lustre03/project/rrg-pbellec/ria-beluga#~cneuromod.anat.freesurfer_longitudinal"
-[submodule "sourcedata/cneuromod.anat.raw"]
-	path = sourcedata/cneuromod.anat.raw
-	url = /lustre03/project/rrg-pbellec/ria-beluga/alias/cneuromod.anat.raw
-	datalad-id = b376774c-889d-11ea-b60e-3ea8d101da1a
-	datalad-url = "ria+file:///lustre03/project/rrg-pbellec/ria-beluga#~cneuromod.anat.raw"
 [submodule "sourcedata/templateflow"]
 	path = sourcedata/templateflow
 	url = /lustre03/project/rrg-pbellec/ria-beluga/alias/templateflow
