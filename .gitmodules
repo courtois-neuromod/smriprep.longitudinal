@@ -17,7 +17,9 @@
 	path = code/smriprep
 	url = git@github.com:bpinsard/smriprep.git
 	datalad-url = git@github.com:bpinsard/smriprep.git
+	datalad-id = 05c27744-3a81-4066-8736-8d0fd74232f7
 [submodule "code/fmriprep"]
 	path = code/fmriprep
 	url = git@github.com:bpinsard/smriprep.git
 	datalad-url = git@github.com:bpinsard/smriprep.git
+	datalad-id = d75cd9e8-e9fe-40f7-9860-1bf7479c178b
