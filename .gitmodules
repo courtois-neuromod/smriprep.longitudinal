@@ -27,3 +27,4 @@
 	path = code/fmriprep
 	url = git@github.com:bpinsard/fmriprep.git
 	datalad-url = git@github.com:bpinsard/fmriprep.git
+	datalad-id = 38ef8184-91ff-4bec-9aa8-690a20569ae5
