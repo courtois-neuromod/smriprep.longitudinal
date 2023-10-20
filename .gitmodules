@@ -23,3 +23,7 @@
 	url = /lustre03/project/rrg-pbellec/ria-beluga/alias/cneuromod.anat.gradcorrect
 	datalad-id = 05db4981-28dd-4404-a8d2-d3adc4322392
 	datalad-url = "ria+file:///lustre03/project/rrg-pbellec/ria-beluga#~cneuromod.anat.gradcorrect"
+[submodule "code/fmriprep"]
+	path = code/fmriprep
+	url = git@github.com:bpinsard/fmriprep.git
+	datalad-url = git@github.com:bpinsard/fmriprep.git
