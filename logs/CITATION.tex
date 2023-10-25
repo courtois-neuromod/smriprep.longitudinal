@@ -1,0 +1,123 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+Results included in this manuscript come from preprocessing performed
+using \emph{fMRIPrep} 0+unknown (\citet{fmriprep1}; \citet{fmriprep2};
+RRID:SCR\_016216), which is based on \emph{Nipype} 1.8.6
+(\citet{nipype1}; \citet{nipype2}; RRID:SCR\_002502).
+
+\begin{description}
+\item[Anatomical data preprocessing]
+A total of 14 T1-weighted (T1w) images were found within the input BIDS
+dataset. All of them were corrected for intensity non-uniformity (INU)
+with \texttt{N4BiasFieldCorrection} \citep{n4}, distributed with ANTs
+(version unknown) \citep[RRID:SCR\_004757]{ants}. The T1w-reference was
+then skull-stripped with a \emph{Nipype} implementation of the
+\texttt{antsBrainExtraction.sh} workflow (from ANTs), using OASIS30ANTs
+as target template. Brain tissue segmentation of cerebrospinal fluid
+(CSF), white-matter (WM) and gray-matter (GM) was performed on the
+brain-extracted T1w using \texttt{fast} \citep[FSL (version unknown),
+RRID:SCR\_002823,][]{fsl_fast}. An anatomical T1w-reference map was
+computed after registration of 14 T1w images (after INU-correction)
+using \texttt{mri\_robust\_template} \citep[FreeSurfer
+7.3.2,][]{fs_template}. An anatomical T2w-reference map was computed
+after registration of 14 T2w images (after INU-correction) using
+\texttt{mri\_robust\_template} \citep[FreeSurfer 7.3.2,][]{fs_template}.
+Brain surfaces were reconstructed using \texttt{recon-all}
+\citep[FreeSurfer 7.3.2, RRID:SCR\_001847,][]{fs_reconall}, and the
+brain mask estimated previously was refined with a custom variation of
+the method to reconcile ANTs-derived and FreeSurfer-derived
+segmentations of the cortical gray-matter of Mindboggle
+\citep[RRID:SCR\_002438,][]{mindboggle}. \emph{Grayordinate} ``dscalar''
+files \citep{hcppipelines} containing 91k samples were also generated
+using the highest-resolution \texttt{fsaverage} as an intermediate
+standardized surface space. Volume-based spatial normalization to two
+standard spaces (MNI152NLin2009cAsym, MNI152NLin6Asym) was performed
+through nonlinear registration with \texttt{antsRegistration} (ANTs
+(version unknown)), using brain-extracted versions of both T1w reference
+and the T1w template. The following templates were were selected for
+spatial normalization and accessed with \emph{TemplateFlow}
+\citep[23.0.0,][]{templateflow}: \emph{ICBM 152 Nonlinear Asymmetrical
+template version 2009c} {[}\citet{mni152nlin2009casym},
+RRID:SCR\_008796; TemplateFlow ID: MNI152NLin2009cAsym{]}, \emph{FSL's
+MNI ICBM 152 non-linear 6th Generation Asymmetric Average Brain
+Stereotaxic Registration Model} {[}\citet{mni152nlin6asym},
+RRID:SCR\_002823; TemplateFlow ID: MNI152NLin6Asym{]}.
+\end{description}
+
+Many internal operations of \emph{fMRIPrep} use \emph{Nilearn} 0.10.1
+\citep[RRID:SCR\_001362]{nilearn}, mostly within the functional
+processing workflow. For more details of the pipeline, see
+\href{https://fmriprep.readthedocs.io/en/latest/workflows.html}{the
+section corresponding to workflows in \emph{fMRIPrep}'s documentation}.
+
+\hypertarget{copyright-waiver}{%
+\subsubsection{Copyright Waiver}\label{copyright-waiver}}
+
+The above boilerplate text was automatically generated by fMRIPrep with
+the express intention that users should copy and paste this text into
+their manuscripts \emph{unchanged}. It is released under the
+\href{https://creativecommons.org/publicdomain/zero/1.0/}{CC0} license.
+
+\hypertarget{references}{%
+\subsubsection{References}\label{references}}
+
+  \bibliography{/localscratch/bpinsard.41803632.0/smriprep\_sub01.job/logs/CITATION.bib}
+
+\end{document}
