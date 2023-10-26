@@ -1,0 +1,18 @@
+{
+  "RawSources": [
+    "sub-05/ses-001/anat/sub-05_ses-001_T1w.nii.gz",
+    "sub-05/ses-002/anat/sub-05_ses-002_T1w.nii.gz",
+    "sub-05/ses-003/anat/sub-05_ses-003_T1w.nii.gz",
+    "sub-05/ses-004/anat/sub-05_ses-004_T1w.nii.gz",
+    "sub-05/ses-005/anat/sub-05_ses-005_T1w.nii.gz",
+    "sub-05/ses-006/anat/sub-05_ses-006_T1w.nii.gz",
+    "sub-05/ses-007/anat/sub-05_ses-007_T1w.nii.gz",
+    "sub-05/ses-008/anat/sub-05_ses-008_T1w.nii.gz",
+    "sub-05/ses-009/anat/sub-05_ses-009_T1w.nii.gz",
+    "sub-05/ses-010/anat/sub-05_ses-010_T1w.nii.gz",
+    "sub-05/ses-011/anat/sub-05_ses-011_T1w.nii.gz",
+    "sub-05/ses-012/anat/sub-05_ses-012_T1w.nii.gz",
+    "sub-05/ses-013/anat/sub-05_ses-013_T1w.nii.gz"
+  ],
+  "Type": "Brain"
+}
