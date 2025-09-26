@@ -14,3 +14,4 @@ sub-*/**/*_events.tsv annex.largefiles=anything
 *.svg annex.largefiles=anything
 * annex.backend=MD5E
 **/.git* annex.largefiles=nothing
+.github/** annex.largefiles=nothing
